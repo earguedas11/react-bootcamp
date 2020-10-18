@@ -4,14 +4,15 @@ import Directory from './components/DirectoryComponent';
 import './App.css';
 import { CAMPSITES } from './components/shared/campsites';
 
-class App extends Component {
+//console.log(CAMPSITES)//
+class App extends Component { //INFO CENTER//
     constructor(props) {
         super(props);
-        this.state = {
-            campsites: CAMPSITES
+        this.state = { //STATE GETS THE INFO//
+            campsites: CAMPSITES,
         };
     }
-    render() {
+    render() { //WHAT GETS RENDERED//
         return (
             <div className="App">
                 <Navbar dark color="primary">
