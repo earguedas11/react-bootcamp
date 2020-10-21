@@ -10,23 +10,19 @@ class CampsiteInfo extends Component{
                 <h4>Comments</h4>
                 {comments.map(comment => {
                         return(
-                            <div key = {comment.id} >
-                                <p>{comment.text}</p>
-                                <p>{comment.author}</p>
-                                <p>{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+                            <div key={comment.id}>
+                                <p>{comment.text}<br />
+                                {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
                             </div>
-                        )
-                    }
-                    )
-                }
-            </div>
-            )
- 
+                        );
+                    })}
+                </div>
+            );
         } 
-        return <div></div>
+        return <div />
     }
 
-    renderCampsite(campsite){
+    renderCampsite(campsite) { //NOT HERE IN WEEK 3//
         return(
             <div className='col-md-5 m-1'>
             <Card>
@@ -41,17 +37,18 @@ class CampsiteInfo extends Component{
     }
     
     render() {
-        if(this.props.campsite){
-            return(
-                <div className="row">
-                    {this.renderCampsite(this.props.campsite)}
-                    {this.renderComments(this.props.campsite.comments)}
+        if (this.props.campsite){
+            return (
+                <div className="container">
+                    <div className="row">
+                       {this.renderCampsite(this.props.campsite)}
+                       {this.renderComments(this.props.campsite.comments)}
+                    </div>
                 </div>
-            )  
+            ); 
         } 
-      return <div />
+      return <div />;
     }
-  
   }
   
   export default CampsiteInfo;
