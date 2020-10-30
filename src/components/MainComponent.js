@@ -9,7 +9,7 @@ import About from './AboutComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
         campsites: state.campsites,
         comments: state.comments,
@@ -39,7 +39,7 @@ class Main extends Component {
                     comments={this.props.comments.filter(comment => comment.campsiteId ===
                         +match.params.campsiteId)} />
             );
-        }
+        };
 
         return (
             <div>
@@ -58,4 +58,4 @@ class Main extends Component {
     }
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default withRouter(connect(mapStateToProps)(Main)); //Connect is a function that returns function
