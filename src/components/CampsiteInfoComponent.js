@@ -35,9 +35,9 @@ class CommentForm extends Component {
   render() {
     return(
     <div>
-      <Button outline onClick={this.toggleModal}><i className="fa fa-pencil fa-lg" />Submit Comment</Button>
+      <Button outline onClick={this.toggleModal}><i className="fa fa-pencil fa-lg" /> Submit Comment</Button>
       <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-             <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
+             <ModalHeader toggle={this.toggleModal}> Submit Comment</ModalHeader>
              <ModalBody>
             <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
               <div className="form-group">
