@@ -35,7 +35,7 @@ class CommentForm extends Component {
   render() {
     return(
     <div>
-      <Button onClick={this.toggleModal}>Submit Comment</Button>
+      <Button outline onClick={this.toggleModal}><i className="fa fa-pencil fa-lg" />Submit Comment</Button>
       <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
              <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
              <ModalBody>
@@ -100,9 +100,9 @@ class CommentForm extends Component {
                     </Control.textarea>
                   </div>
              <div className="form-group">  
-                  <Button type="submit" color="primary">
-                    Submit Comment
-                  </Button>
+                   <Button outline onClick={this.toggleModal}>
+                    <i className="fa fa-pencil fa-lg" /> Submit Comment
+                    </Button>
               </div>
             </LocalForm>
           </ModalBody>
