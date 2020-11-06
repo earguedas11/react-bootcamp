@@ -39,13 +39,13 @@ function Home(props) {
                         errMess={props.promotionErrMess}
                     />
                 </div>
-                <div className="col-md m-1">
+               {/*  <div className="col-md m-1">
                     <RenderCard 
                         item={props.partner} 
                         isLoading={props.partnerLoading}
                         errMess={props.partnerErrMess}
                     />
-                </div>
+                </div> */}
             </div>
         </div>
     );
